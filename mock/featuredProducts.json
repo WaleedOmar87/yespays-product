@@ -1,0 +1,80 @@
+{
+	"products": [
+		{
+			"brand_logo": "./src/images/adidas-logo.svg",
+			"image": "./src/images/featured-product-1.png",
+			"title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+			"price_original": 9999,
+			"price_discounted": 9999,
+			"discount_amount": "30%",
+			"currency": "LE",
+			"rating": 4,
+			"shipping_type": "international",
+			"shipping_information": {
+				"from": "UK",
+				"to": "Egypt",
+				"duration": "10 Days"
+			}
+		},
+		{
+			"brand_logo": "./src/images/adidas-logo.svg",
+			"image": "./src/images/featured-product-2.png",
+			"title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+			"price_original": 9999,
+			"price_discounted": 9999,
+			"discount_amount": "30%",
+			"currency": "LE",
+			"rating": 4,
+			"shipping_type": "local",
+			"shipping_information": {
+				"from": "Genena Mall"
+			}
+		},
+		{
+			"brand_logo": "./src/images/adidas-logo.svg",
+			"image": "./src/images/featured-product-3.png",
+			"title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+			"price_original": 9999,
+			"price_discounted": 9999,
+			"discount_amount": "30%",
+			"currency": "LE",
+			"rating": 4,
+			"shipping_type": "international",
+			"shipping_information": {
+				"from": "UK",
+				"to": "EG",
+				"duration": "10 Days"
+			}
+		},
+		{
+			"brand_logo": "./src/images/adidas-logo.svg",
+			"image": "./src/images/featured-product-4.png",
+			"title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+			"price_original": 9999,
+			"price_discounted": 9999,
+			"discount_amount": "30%",
+			"currency": "LE",
+			"rating": 4,
+			"shipping_type": "local",
+			"shipping_information": {
+				"from": "Genena Mall"
+			}
+		},
+		{
+			"brand_logo": "./src/images/adidas-logo.svg",
+			"image": "./src/images/featured-product-1.png",
+			"title": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+			"price_original": 9999,
+			"price_discounted": 9999,
+			"discount_amount": "30%",
+			"currency": "LE",
+			"rating": 4,
+			"shipping_type": "international",
+			"shipping_information": {
+				"from": "UK",
+				"to": "Egypt",
+				"duration": "10 Days"
+			}
+		}
+	]
+}

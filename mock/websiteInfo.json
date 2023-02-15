@@ -1,0 +1,75 @@
+{
+	"offers": [
+		{
+			"id": "2",
+			"title": "Valentine’s Day Offers! Buy Two Get One Free Shop Now",
+			"url": "#"
+		},
+		{
+			"id": "3",
+			"title": "Valentine’s Day Offers! Buy Two Get One Free Shop Now",
+			"url": "#"
+		}
+	],
+	"categories": [
+		{
+			"title": "Men",
+			"url": "#"
+		},
+		{
+			"title": "Women",
+			"url": "#"
+		},
+		{
+			"title": "Unisex",
+			"url": "#"
+		},
+		{
+			"title": "Kids",
+			"url": "#"
+		},
+		{
+			"title": "Best Sellers",
+			"url": "#"
+		},
+		{
+			"title": "New Arrivals",
+			"url": "#"
+		},
+
+		{
+			"title": "Offers",
+			"url": "#"
+		}
+	],
+	"footer_menu": [
+		{
+			"title": "About Us",
+			"url": "#"
+		},
+		{
+			"title": "Contact Us",
+			"url": "#"
+		},
+		{
+			"title": "Track Offers",
+			"url": "#"
+		},
+		{
+			"title": "Terms And Conditions",
+			"url": "#"
+		},
+		{
+			"title": "Privacy Polity",
+			"url": "#"
+		},
+		{
+			"title": "Sell With Us",
+			"url": "#"
+		},
+		{
+			"title": "Shipping And Returns",
+			"url": "#"
+		}
+	]
+}
