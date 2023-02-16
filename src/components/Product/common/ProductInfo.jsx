@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useProduct } from "@main/hooks";
+import { AppContext } from "@main/store";
+import { updateCart } from "@main/utils";
 import { QuantityInput } from "@main/components/Form/common/Input";
 import { Rating } from "react-simple-star-rating";
 
 export function ProductInfo() {
-	const { productDetails, cartItems, dispatchAction } = useProduct();
+	const { productDetails } = useProduct();
+	const { selectedProduct, cartItems, dispatchAction } =
+		useContext(AppContext);
 	const onChangeSize = (event) => {
-		// Not yet implemented
 		let newSize = event.target.name;
+		dispatchAction("selectedProduct", {
+			...selectedProduct,
+			size: newSize,
+		});
 	};
-	const onChangeQuantity = (event) => {};
-	const onChangeColor = (event) => {};
+	const onChangeColor = (event) => {
+		dispatchAction("selectedProduct", {
+			...selectedProduct,
+			color: event.target.dataset.name,
+		});
+	};
 	const onAddToCart = (event) => {
-		// Toggle cart
 		dispatchAction("cartStatus", true);
-		dispatchAction("cartItems", [{ ...productDetails }]);
+		dispatchAction(
+			"cartItems",
+			updateCart(cartItems, productDetails, selectedProduct)
+		);
 	};
 	return (
 		<div className="product-information">
@@ -98,6 +111,7 @@ export function ProductInfo() {
 									<img
 										src={color.color_image}
 										alt={color.color_name}
+										name={color.color_name}
 									/>
 								</button>
 							);

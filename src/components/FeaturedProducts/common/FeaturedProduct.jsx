@@ -1,4 +1,3 @@
-import { formatRating } from "@main/utils";
 import { ShippingInformation } from "./ShippingInformation";
 import { Rating } from "react-simple-star-rating";
 

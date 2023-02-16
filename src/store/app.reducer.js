@@ -2,11 +2,7 @@
 export const initialState = {
 	cartItems: [],
 	productDetails: {},
-	selectedProduct: {
-		quantity: 1,
-		color: "",
-		size: "",
-	},
+	selectedProduct: {},
 	wishListed: false,
 	productQuantity: 0,
 	loading: true,

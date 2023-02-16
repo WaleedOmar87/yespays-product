@@ -1,19 +1,18 @@
 export function CartItem({ product }) {
+	let { id, slug, product_images, quantity, price_discounted, currency } =
+		product;
 	return (
-		<div className="cart-item">
+		<div className="cart-item" data-id={id}>
 			<div className="product-image">
-				<img
-					src={product.product_images[0].thumbnail}
-					alt={product.title}
-				/>
+				<img src={product_images[0].thumbnail} alt={slug} />
 			</div>
 			<div className="product-details">
-				<h4 className="title">{product.slug}</h4>
-				<span className="quantity">Quantity: 1</span>
+				<h4 className="title">{slug}</h4>
+				<span className="quantity">Quantity: {quantity}</span>
 				<div className="product-meta">
 					<span className="price">
-						{product.price_discounted}
-						<span className="currency">{product.currency}</span>
+						{price_discounted}
+						<span className="currency">{currency}</span>
 					</span>
 					<button className="button x-small primary">Remove</button>
 				</div>
