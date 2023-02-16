@@ -11,7 +11,7 @@ export function Cart() {
 	return (
 		<div className={`cart-sidebar ${!cartStatus && "hidden"}`}>
 			<div className="cart-overlay"></div>
-			<div className="cart-container">
+			<div className={`cart-container ${cartStatus && "open"}`}>
 				<button onClick={onCloseCart} className="close-cart">
 					<img src="/public/close.svg" alt="Close Cart" />
 				</button>
