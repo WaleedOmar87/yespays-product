@@ -3,14 +3,16 @@ import { AppContext } from "@main/store";
 import { SearchForm } from "@main/components/Form";
 import { useProduct } from "@main/hooks";
 export function MainNavigation() {
-	const { productDetails } = useProduct();
+	const { productDetails, dispatchAction } = useProduct();
 	const { cartItems } = useContext(AppContext);
-
+	const onToggleCart = () => {
+		dispatchAction("cartStatus", true);
+	};
 	return (
 		<div className="main-navigation">
 			<div className="container">
 				<div className="row">
-					<div className="col-12">
+					<div className="col-12 section-container">
 						<div className="left-section">
 							<SearchForm />
 						</div>
@@ -26,7 +28,11 @@ export function MainNavigation() {
 							<div className="cart-list">
 								<ul className="list">
 									<li>
-										<a href="#" className="cart">
+										<a
+											onClick={onToggleCart}
+											href="#"
+											className="cart"
+										>
 											<div className="cart-icon">
 												<img
 													src="/public/cart-total-icon.svg"

@@ -12,6 +12,8 @@ export const initialState = {
 	loading: true,
 	pageContent: {},
 	featuredProducts: [],
+	cartOpen: false,
+	cartTotal: 0,
 };
 
 /* Main App Reducer */

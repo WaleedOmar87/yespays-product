@@ -25,7 +25,9 @@
 	"brand_logo": "/src/images/adidas-logo.svg",
 	"rating": 4,
 	"rating_count": 22,
-	"price": 9999,
+	"price_discounted": 9999,
+	"price_original": 9999,
+	"discount_amount": "30%",
 	"currency": "LE",
 	"sizes": {
 		"small": "Small",
@@ -54,22 +56,22 @@
 		{
 			"alt_text": "Product Image 1",
 			"src": "/src/images/product-image-1.png",
-			"thumbnail": "/src/images/product-image-1.png"
+			"thumbnail": "/src/images/product-thumbnail-1.png"
 		},
 		{
 			"alt_text": "Product Image 2",
 			"src": "/src/images/product-image-2.png",
-			"thumbnail": "/src/images/product-image-2.png"
+			"thumbnail": "/src/images/product-thumbnail-2.png"
 		},
 		{
 			"alt_text": "Product Image 3",
 			"src": "/src/images/product-image-3.png",
-			"thumbnail": "/src/images/product-image-3.png"
+			"thumbnail": "/src/images/product-thumbnail-3.png"
 		},
 		{
 			"alt_text": "Product Image 4",
 			"src": "/src/images/product-image-5.png",
-			"thumbnail": "/src/images/product-image-4.png"
+			"thumbnail": "/src/images/product-thumbnail-4.png"
 		}
 	]
 }

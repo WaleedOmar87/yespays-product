@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductInfo } from "./common/ProductInfo";
 import { ProductSlider } from "./common/ProductSlider";
+import "./Product.style.scss";
 export function Product() {
 	return (
 		<div className="product-container">

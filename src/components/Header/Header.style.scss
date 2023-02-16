@@ -1,10 +1,115 @@
-:root {
-	--primary-color: #FFF200;
-	--secondary-color: #542E90;
-	--footer-background: ##3C3C3B;
-	--categories-background: ##000000
-}
-
+/* /common/SecondaryNav.jsx */
 .secondary-navigation {
 	background: var(--primary-color);
+	box-shadow: 0px 1px 2.2px #00000080;
+	padding: 14px 0;
+	.row .col-12 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.left-section {
+			.menu-icon {
+				margin-right: 30px;
+				width: 24px;
+			}
+		}
+		.center-section {
+			.flash-container {
+				display: flex;
+				max-width: 500px;
+				a {
+					font-weight: 300;
+					color: var(--color-black);
+				}
+			}
+		}
+		.right-section {
+			.list {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 30px;
+				a {
+					color: var(--color-black);
+					font-weight: 500;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+/* /common/MainNav.jsx */
+.main-navigation {
+	.section-container {
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 13px 0;
+		justify-content: space-between;
+		align-items: center;
+		.right-section {
+			.list {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 30px;
+				align-items: center;
+				li {
+					a {
+						display: flex;
+						align-items: center;
+						span.text {
+							margin-left: 8px;
+							color: var(--color-black);
+							font-weight: 500;
+						}
+					}
+					div.cart-icon {
+						position: relative;
+						.cart-total {
+							position: absolute;
+							color: var(--color-black);
+							font-size: 10px;
+							padding: 2px 5px;
+							background-color: var(--primary-color);
+							border-radius: 100px;
+							right: -2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* /common/Categories.jsx */
+.categories-navigation {
+	background-color: var(--color-black);
+	padding: 13px 0;
+	box-shadow: 0px 1px 2px #00000040;
+	.section-container {
+		display: flex;
+		justify-content: space-between;
+		a {
+			color: #fff;
+			font-weight: 500;
+		}
+	}
+}
+
+/* /common/Breadcrumb.jsx  */
+.breadcrumb-navigation {
+	padding: 30px 0px;
+	border-bottom: 1px solid var(--color-black);
+	.section-container {
+		a {
+			margin-right: 5px;
+			color: var(--color-black);
+			&:after {
+				content: "/";
+				margin-left: 5px;
+			}
+			span.url {
+				text-decoration: underline;
+			}
+		}
+	}
 }

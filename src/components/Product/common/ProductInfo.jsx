@@ -1,15 +1,21 @@
 import React from "react";
 import { useProduct } from "@main/hooks";
 import { QuantityInput } from "@main/components/Form/common/Input";
+import { Rating } from "react-simple-star-rating";
 
 export function ProductInfo() {
-	const { productDetails, dispatchAction } = useProduct();
+	const { productDetails, cartItems, dispatchAction } = useProduct();
 	const onChangeSize = (event) => {
+		// Not yet implemented
 		let newSize = event.target.name;
 	};
 	const onChangeQuantity = (event) => {};
 	const onChangeColor = (event) => {};
-	const onAddToCart = (event) => {};
+	const onAddToCart = (event) => {
+		// Toggle cart
+		dispatchAction("cartStatus", true);
+		dispatchAction("cartItems", [{ ...productDetails }]);
+	};
 	return (
 		<div className="product-information">
 			<div className="product-brand">
@@ -27,7 +33,9 @@ export function ProductInfo() {
 			<div className="product-meta">
 				<span className="category">{productDetails.category}</span>
 				<span className="rating">
-					<div className="rating-start"></div>
+					<div className="rating-start">
+						<Rating readonly initialValue={productDetails.rating} />
+					</div>
 					<div className="rating-total">
 						{productDetails.rating} of 5
 					</div>
@@ -35,9 +43,26 @@ export function ProductInfo() {
 						{productDetails.rating_count} Rates
 					</div>
 				</span>
+				<span className="price">
+					<span className="price-discounted">
+						{productDetails.price_discounted}
+						<span className="currency">
+							{productDetails.currency}
+						</span>
+					</span>
+					<span className="price-original">
+						{productDetails.price_original}
+						<span className="currency">
+							{productDetails.currency}
+						</span>
+					</span>
+					<span className="discount-amount">
+						{productDetails.discount_amount} Off
+					</span>
+				</span>
 			</div>
 			<div className="product-meta">
-				<span className="meta-title">Size</span>
+				<h3 className="meta-title">Size</h3>
 				<div className="size-selector">
 					{(() => {
 						return (
@@ -50,7 +75,7 @@ export function ProductInfo() {
 											name={size}
 											onClick={onChangeSize}
 										>
-											{size}
+											{productDetails.sizes[size]}
 										</button>
 									);
 								}
@@ -60,7 +85,7 @@ export function ProductInfo() {
 				</div>
 			</div>
 			<div className="product-meta">
-				<span className="meta-title">Color</span>
+				<h3 className="meta-title">Color</h3>
 				<div className="color-selector">
 					{productDetails.colors &&
 						productDetails.colors.map((color, index) => {
@@ -79,8 +104,8 @@ export function ProductInfo() {
 						})}
 				</div>
 			</div>
-			<div className="product-meta">
-				<span className="meta-title">Quantity</span>
+			<div className="product-meta quantity">
+				<h3 className="meta-title">Quantity</h3>
 				<div className="quantity-selector">
 					<QuantityInput
 						min={1}
@@ -88,18 +113,18 @@ export function ProductInfo() {
 					/>
 				</div>
 			</div>
-			<div className="product-meta">
+			<div className="product-meta purchase">
 				<div className="purchase-buttons">
 					<button
 						onClick={onAddToCart}
-						className="button purchase-button add-to-cart"
+						className="button primary purchase-button add-to-cart"
 						name="addToCart"
 					>
 						Add To Cart
 					</button>
 					<a
 						href="#"
-						className="button purchase-button pick-from-store"
+						className="button secondary purchase-button pick-from-store"
 					>
 						Pick From Store
 					</a>

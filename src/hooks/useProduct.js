@@ -29,5 +29,5 @@ export function useProduct() {
 		})();
 		return () => {};
 	}, []);
-	return { error, loading, productDetails };
+	return { error, loading, productDetails, dispatchAction };
 }

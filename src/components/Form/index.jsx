@@ -1,5 +1,6 @@
 import React from "react";
 import { SearchInput, SubscriberInput } from "./common/Input";
+import "./Form.style.scss";
 
 export function SearchForm() {
 	return (

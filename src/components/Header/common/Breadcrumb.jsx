@@ -8,16 +8,17 @@ export function Breadcrumb() {
 	return (
 		<div className="breadcrumb-navigation">
 			<div className="container">
-				<div className="col-12">
+				<div className="col-12 section-container">
 					{breadcrumb &&
 						breadcrumb.length &&
 						breadcrumb.map((item, index) => {
 							return (
 								<a href={item.url} key={index}>
-									{item.title}
+									<span className="url">{item.title}</span>
 								</a>
 							);
 						})}
+					{productDetails.slug}
 				</div>
 			</div>
 		</div>

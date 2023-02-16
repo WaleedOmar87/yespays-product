@@ -5,7 +5,7 @@ import "swiper/css";
 export const Flash = () => {
 	let { pageContent } = usePageContent();
 	return (
-		<>
+		<div className="flash-container">
 			<Swiper slidesPerView={1}>
 				{pageContent.offers &&
 					pageContent.offers.length &&
@@ -17,6 +17,6 @@ export const Flash = () => {
 						);
 					})}
 			</Swiper>
-		</>
+		</div>
 	);
 };

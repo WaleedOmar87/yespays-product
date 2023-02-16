@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap");
+:root {
+	--primary-color: #fff200;
+	--secondary-color: #542e90;
+	--footer-background: ##3c3c3b;
+	--categories-background: ##000000;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey: #a7a9ac;
+	--color-dark-grey: #575756;
+	--element-min-width: 350px;
+	--border-grey: #d9d9d9;
+	--border-light-grey: #ececec;
+	--footer-background: #3c3c3b;
+	--footer-border: #414141;
+	--total-color: #1d1d1b;
+}
+body {
+	font-family: Alexandria, sans-serif;
+	font-size: 14px;
+}
+h1 {
+	font-size: 1.7em;
+}
+h2 {
+	font-size: 1.28em;
+	line-height: 1.3em;
+}
+h3 {
+	font-size: 1.14em;
+	line-height: 1.3em;
+}
+h4 {
+	font-size: 1em;
+}
+button {
+	background: none;
+	border: none;
+	outline: none;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+.button {
+	border-radius: 27px;
+	font-weight: 500;
+	padding: 18px 0;
+	width: 250px;
+	font-size: 1.14em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-black);
+}
+.button.small {
+	font-size: 0.85em;
+	width: 200px;
+	padding: 16px 0;
+}
+.button.x-small {
+	width: 80px;
+	padding: 10px 0;
+	font-size: 0.71em;
+}
+.button.primary {
+	background-color: var(--primary-color);
+}
+.button.secondary {
+	background-color: var(--secondary-color);
+	color: var(--color-white);
+}

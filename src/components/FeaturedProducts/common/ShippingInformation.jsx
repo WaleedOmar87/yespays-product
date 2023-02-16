@@ -1,10 +1,12 @@
 export function ShippingInformation({ shippingType, shippingInformation }) {
 	return shippingType == "local" ? (
-		<span>
-			<b>Pick From</b>: {shippingInformation.from}
+		<span className="shipping-container center">
+			<span>
+				<b>Pick From</b>: {shippingInformation.from}
+			</span>
 		</span>
 	) : (
-		<span>
+		<span className="shipping-container">
 			<span>
 				<b>From</b>
 				{shippingInformation.from}

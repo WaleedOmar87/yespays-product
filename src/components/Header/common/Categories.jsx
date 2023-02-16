@@ -8,7 +8,7 @@ export function Categories() {
 	return (
 		<div className="categories-navigation">
 			<div className="container">
-				<div className="col-12">
+				<div className="col-12 section-container">
 					{categories &&
 						categories.length &&
 						categories.map((category, index) => {

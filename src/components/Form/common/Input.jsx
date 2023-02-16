@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { AppContext } from "@main/store";
+import "@main/components/Form/Form.style.scss";
 
 export function SearchInput() {
 	return (
-		<div className="input-container">
+		<div className="input-container search-input">
 			<span className="input-icon">
 				<img src="/public/search-icon.svg" alt="Search" />
 			</span>
@@ -19,13 +20,17 @@ export function SearchInput() {
 
 export function SubscriberInput() {
 	return (
-		<div className="input-container">
+		<div className="input-container subscribe-input">
 			<input
 				type="text"
 				name="subscriber-email"
 				className="form-input"
 				placeholder="Enter Your Email"
 			/>
+			<button className="subscribe-button">
+				<span>Subscribe</span>
+				<img src="/public/paperplan-icon.svg" alt="Subscribe" />
+			</button>
 		</div>
 	);
 }
@@ -53,12 +58,6 @@ export function QuantityInput({ min, max }) {
 
 	return (
 		<div className="input-container quantity-input">
-			<input
-				type="number"
-				max={max}
-				min={min}
-				defaultValue={selectedProduct.quantity}
-			/>
 			<button
 				className="quantityDecrease"
 				name="decrease"
@@ -66,6 +65,12 @@ export function QuantityInput({ min, max }) {
 			>
 				-
 			</button>
+			<input
+				type="number"
+				max={max}
+				min={min}
+				defaultValue={selectedProduct.quantity}
+			/>
 			<button
 				className="quantityIncrease"
 				name="increase"
